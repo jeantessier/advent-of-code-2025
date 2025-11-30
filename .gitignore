@@ -1,0 +1,14 @@
+stats.csv
+stats.md
+*~
+*.out
+
+# Puzzle data, as per https://adventofcode.com/2025/about#faq_copying
+**/*input*.txt
+**/*sample*.txt
+
+# Bundle working folder
+.bundle
+
+# Ignore IDE files
+.idea
