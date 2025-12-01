@@ -5,3 +5,8 @@
 I used simple modulo arithmetic to calculate the position after each rotation.
 Modulo arithmetic in Ruby did the proper rotation when subtracting into negative
 values.
+
+## Puzzle 2
+
+I got stuck on the special cases when landing on zero and rotating left, but not
+a full rotation.  I couldn't get the special cases to work properly.
