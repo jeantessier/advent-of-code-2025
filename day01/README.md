@@ -10,3 +10,9 @@ values.
 
 I got stuck on the special cases when landing on zero and rotating left, but not
 a full rotation.  I couldn't get the special cases to work properly.
+
+## JavaScript
+
+The JavaScript solution is somewhat straightforward, but modulo arithmetic is
+different in JavaScript.  It does not do the proper rotation when subtracting
+into negative values.
