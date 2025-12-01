@@ -20,11 +20,7 @@ puts '---------'
 puts rotations.inspect
 puts
 
-positions = rotations
-  .reduce([50]) do |acc, rotation|
-    acc << (acc.last + rotation) % 100
-    acc
-  end
+positions = rotations.reduce([50]) { |acc, rotation| acc << (acc.last + rotation) % 100 }
 
 puts 'Positions'
 puts '---------'
