@@ -15,4 +15,5 @@ a full rotation.  I couldn't get the special cases to work properly.
 
 The JavaScript solution is somewhat straightforward, but modulo arithmetic is
 different in JavaScript.  It does not do the proper rotation when subtracting
-into negative values.
+into negative values.  It made Puzzle 1 slightly more complicated, but it made
+Puzzle 2 slightly simpler.
