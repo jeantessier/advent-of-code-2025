@@ -27,11 +27,3 @@ I just tinker on these late in the evening.  For these, I care more about coming
 up with a solution that I find elegant than adhering to strict engineering
 discipline.  I try to keep the code "simple", so each solution is a single
 script that operates on an input text file and writes to stdout.
-
-### Stats
-
-|    Day     |  | Part 1 Rank | Part 1 Total | Part 1 Percentile |  | Part 2 Rank | Part 2 Total | Part 2 Percentile |
-|:----------:|--|:-----------:|:------------:|:-----------------:|--|:-----------:|:------------:|:-----------------:|
-| [1](day01) |  |             |              |                   |  |             |              |                   |
-
-As of 2025-11-30 10:45:00 PST.
