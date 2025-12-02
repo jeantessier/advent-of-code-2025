@@ -5,8 +5,10 @@
 INVALID_ID_REGEX = /^(\d+)\1$/
 
 # lines = readlines
-# lines = File.readlines('sample.txt', chomp: true) # Answer: 1227775554 (in 53 ms)
-lines = File.readlines('input.txt', chomp: true) # Answer: 38310256125 (in 2,484 ms)
+# lines = File.readlines('sample.txt', chomp: true)
+# ANSWER = 1227775554 # (in 53 ms)
+lines = File.readlines('input.txt', chomp: true)
+ANSWER = 38310256125 # (in 2,484 ms)
 
 ranges = lines
   .map { |line| line.split(',') }
@@ -41,4 +43,4 @@ puts
 total = invalid_ids.sum
 
 puts "Total: #{total}"
-puts "OK" if total == 1227775554
+puts "OK" if total == ANSWER
