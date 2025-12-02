@@ -4,8 +4,8 @@ import fs from 'node:fs'
 
 const LINE_REGEX = /(?<direction>[LR])(?<distance>\d+)/
 
-fs.readFile('sample.txt', 'utf8', (err, data) => {
-// fs.readFile('input.txt', 'utf8', (err, data) => {
+// fs.readFile('sample.txt', 'utf8', (err, data) => {
+fs.readFile('input.txt', 'utf8', (err, data) => {
     if (err) {
         console.error(err)
         return
@@ -28,12 +28,11 @@ fs.readFile('sample.txt', 'utf8', (err, data) => {
 
     const positions = rotations.reduce((acc, distance) => {
         const previous_position = acc.at(-1)
-        const new_position = (previous_position + distance) % 100
-        if (new_position >= 0) {
-            acc.push(new_position)
-        } else {
-            acc.push(100 + new_position)
+        let new_position = (previous_position + distance) % 100
+        if (new_position < 0) {
+            new_position += 100
         }
+        acc.push(new_position)
         return acc
     }, [50])
 
