@@ -2,8 +2,6 @@
 
 # Login to https://adventofcode.com/2025/day/3/input to download 'input.txt'.
 
-INVALID_ID_REGEX = /^(\d+)\1$/
-
 # lines = readlines
 # lines = File.readlines('sample.txt', chomp: true)
 # ANSWER = 357 # 45 ms)
