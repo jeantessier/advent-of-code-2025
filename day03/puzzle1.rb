@@ -17,10 +17,10 @@ puts
 
 joltages = banks
   .map do |bank|
-    left_digit = bank[...-1].max
-    left_pos = bank.find_index(left_digit)
-    right_digit = bank[(left_pos+1)..].max
-    left_digit * 10 + right_digit
+    left_battery = bank[...-1].max
+    left_pos = bank.find_index(left_battery)
+    right_battery = bank[(left_pos+1)..].max
+    left_battery * 10 + right_battery
   end
 
 puts 'Joltages'
