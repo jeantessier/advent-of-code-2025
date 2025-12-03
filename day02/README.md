@@ -17,7 +17,7 @@ length of the prefix.  For example, the id `11111` with length 5 would not be a
 repetition of `11`, which has length 2, because 5 is not a multiple of 2.
 
 [Someone on the Internet](https://notes.hamatti.org/technology/advent-of-code/2025/day-2)
-suggested using the regex `/^(\d)(\1)+$/` to check for repetitions. I thought I
+suggested using the regex `/^(\d+)(\1)+$/` to check for repetitions. I thought I
 was being clever with my increasing prefixes and skipping non-multiples, but
 that regex works in under 1,000 milliseconds, whereas my brute force approach
 takes over 10,000 milliseconds.
