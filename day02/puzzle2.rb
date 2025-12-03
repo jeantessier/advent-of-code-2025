@@ -2,8 +2,6 @@
 
 # Login to https://adventofcode.com/2025/day/2/input to download 'input.txt'.
 
-INVALID_ID_REGEX = /^(\d+)\1$/
-
 class Integer
   def multiple_of?(number)
     self % number == 0
