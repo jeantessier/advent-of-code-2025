@@ -6,9 +6,9 @@ INVALID_ID_REGEX = /^(\d+)\1$/
 
 # lines = readlines
 # lines = File.readlines('sample.txt', chomp: true)
-# ANSWER = 1227775554 # (in 53 ms)
+# ANSWER = 1227775554 # (in 49 ms)
 lines = File.readlines('input.txt', chomp: true)
-ANSWER = 38310256125 # (in 2,484 ms)
+ANSWER = 38310256125 # (in 930 ms)
 
 ranges = lines
   .map { |line| line.split(',') }
@@ -21,19 +21,9 @@ puts '------'
 puts ranges.inspect
 puts
 
-ids = ranges
-        .map(&:to_a)
-        .flatten
-        .map(&:to_s)
-
-puts 'IDs'
-puts '---'
-puts ids.inspect
-puts
-
-invalid_ids = ids
-  .select { |id| id =~ INVALID_ID_REGEX }
-  .map(&:to_i)
+invalid_ids = ranges
+  .map { |range| range.select { |id| id.to_s =~ INVALID_ID_REGEX } }
+  .flatten
 
 puts 'Invalid IDs'
 puts '-----------'
