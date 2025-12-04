@@ -6,7 +6,7 @@
 # lines = File.readlines('sample.txt', chomp: true)
 # ANSWER = 13 # 37 ms)
 lines = File.readlines('input.txt', chomp: true)
-ANSWER = -1 # (in 129 ms)
+ANSWER = 1493 # (in 129 ms)
 
 map = lines.map do |line|
   line.split('')
