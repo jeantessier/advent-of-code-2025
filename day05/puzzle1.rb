@@ -17,7 +17,7 @@ fresh_ranges = lines
   .map { |match| match[:start].to_i..match[:end].to_i }
 
 puts 'Fresh Ranges'
-puts '-----------'
+puts '------------'
 puts fresh_ranges.inspect
 puts
 
