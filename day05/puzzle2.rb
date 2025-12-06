@@ -45,7 +45,7 @@ puts '-------------'
 puts merged_ranges.inspect
 puts
 
-total = merged_ranges.map(&:size).sum
+total = merged_ranges.sum(&:size)
 
 puts "Total: #{total}"
 puts "OK" if total == ANSWER
