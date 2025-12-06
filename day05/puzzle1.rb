@@ -7,7 +7,7 @@ ID_REGEX = /^(?<id>\d+)$/
 
 # lines = readlines
 # lines = File.readlines('sample.txt', chomp: true)
-# ANSWER = 3 # 39 ms)
+# ANSWER = 3 # (in 39 ms)
 lines = File.readlines('input.txt', chomp: true)
 ANSWER = 505 # (in 63 ms)
 
