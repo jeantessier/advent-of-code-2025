@@ -31,4 +31,6 @@ By the time I'm done, the location just below the entrance `S` has the total
 number of ~~paths~~ timelines through the manifold.
 
 I feel there is a depth-first traversal algorithm that could be used here.  It
-could use recursion to follow each path and add them up when it backtracks.
+could use recursion to follow each path and add them up when it backtracks.  It
+would have to cache internal values when split beams overlap to avoid
+recomputing them.
