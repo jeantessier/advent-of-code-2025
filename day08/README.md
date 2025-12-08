@@ -13,3 +13,12 @@ selected shortest paths.  If the two ends are in different circuits, merge the
 circuits.
 
 Sort the circuits by size, take the top 3, and multiply their sizes together.
+
+## Puzzle 2
+
+Remove the reins and use `Enumerable#find` to combine the circuits, stopping
+when we have only one giant circuit.  `#find` returns the pair that combined the
+last two circuits.
+
+Multiply the `X` coordinate of the two junction boxes in the pair to get the
+answer.
