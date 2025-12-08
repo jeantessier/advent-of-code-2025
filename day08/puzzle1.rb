@@ -12,7 +12,9 @@ ANSWER = 72150 # (in 579 ms)
 
 JunctionBox = Struct.new(:x, :y, :z) do
   def distance_to(other)
-    Math.sqrt((x - other.x)**2 + (y - other.y)**2 + (z - other.z)**2)
+    # Math.sqrt((x - other.x)**2 + (y - other.y)**2 + (z - other.z)**2)
+    # We only use distance in sorting, so we don't need exact distance.
+    (x - other.x)**2 + (y - other.y)**2 + (z - other.z)**2
   end
 
   def to_s
