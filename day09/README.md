@@ -34,8 +34,8 @@ I spent a lot of time trying to determine if a segment intersects a rectangle.
 I was drafting some of the conditions, but after three hours of tinkering, I
 still wasn't sure if I had them all.  Plus, I was getting tired.  I was messing
 around with ranges, and it all got a bit confusing.  Until I switched strategy
-and only min/max of X and min/max of Y.  I ended up consulting the Internet to
-check on
+and only worked with min/max of X and min/max of Y instead.  I ended up
+consulting the Internet to check on
 [overlapping rectangles](https://stackoverflow.com/questions/306316/determine-if-two-rectangles-overlap-each-other).
 It reassured me that I was basically there.
 
