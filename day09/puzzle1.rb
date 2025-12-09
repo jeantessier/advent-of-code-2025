@@ -6,7 +6,7 @@
 # lines = File.readlines('sample.txt', chomp: true)
 # ANSWER = 50 # (in 39 ms)
 lines = File.readlines('input.txt', chomp: true)
-ANSWER = 4750176210 # (in 361 ms)
+ANSWER = 4750176210 # (in 95 ms)
 
 RedTile = Struct.new(:x, :y) do
   def area_between(other) = ((x - other.x).abs + 1) * ((y - other.y).abs + 1)
@@ -22,7 +22,8 @@ red_tiles = lines.map { |line| RedTile.new(*line.split(',').map(&:to_i)) }
 
 puts 'Red Tiles'
 puts '---------'
-puts red_tiles
+puts red_tiles.take(10)
+puts "..."
 puts
 
 rectangles = red_tiles
@@ -33,7 +34,8 @@ rectangles = red_tiles
 
 puts 'Rectangles'
 puts '----------'
-puts rectangles
+puts rectangles.take(10)
+puts "..."
 puts
 
 total = rectangles.first.area
