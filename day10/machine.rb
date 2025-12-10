@@ -22,11 +22,8 @@ class Machine
 
   def find_shortest_initialization_sequence
     (1..@buttons.size).find do |i|
-      (0...@buttons.size).to_a.permutation(i).any? do |sequence|
-        reset!
-        # puts "Trying sequence #{sequence.inspect}"
-        press_buttons *sequence
-        done?
+      @buttons.permutation(i).any? do |sequence|
+        sequence.reduce(0) { |acc, button| acc ^ button } == @target_lights
       end
     end
   end

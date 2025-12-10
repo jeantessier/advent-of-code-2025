@@ -8,7 +8,7 @@ require './machine'
 # lines = File.readlines('sample.txt', chomp: true)
 # ANSWER = 7 # (in 44 ms)
 lines = File.readlines('input.txt', chomp: true)
-ANSWER = 396 # (in 166 ms)
+ANSWER = 396 # (in 153 ms)
 
 machines = lines.map { |line| Machine.new(line) }
 
@@ -21,7 +21,6 @@ puts
 # machines[0].press_buttons 4, 5
 # machines[1].press_buttons 2, 3, 4
 # machines[2].press_buttons 1, 2
-
 
 # puts "Machines (#{machines.size})"
 # puts '--------'
