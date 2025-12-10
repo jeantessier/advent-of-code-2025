@@ -27,3 +27,22 @@ I just tinker on these late in the evening.  For these, I care more about coming
 up with a solution that I find elegant than adhering to strict engineering
 discipline.  I try to keep the code "simple", so each solution is a single
 script that operates on an input text file and writes to stdout.
+
+### Stats
+
+|     Day     |  | Part 1 Time | Part 2 Time |  | Part 1 Runtime | Part 2 Runtime |
+|:-----------:|--|:-----------:|:-----------:|--|---------------:|---------------:|
+| [12](day12) |  |             |             |  |                |                |
+| [11](day11) |  |             |             |  |                |                |
+| [10](day10) |  |             |             |  |                |                |
+| [9](day09)  |  |  00:10:00   |  02:52:40   |  |          95 ms |       2,086 ms |
+| [8](day08)  |  |  00:45:37   |  00:58:39   |  |         579 ms |         830 ms |
+| [7](day07)  |  |  00:29:33   |  01:18:23   |  |          63 ms |          67 ms |
+| [6](day06)  |  |  00:27:48   |  01:08:08   |  |          56 ms |          71 ms |
+| [5](day05)  |  |  00:13:19   |  01:03:25   |  |          63 ms |          50 ms |
+| [4](day04)  |  |  00:34:47   |  00:49:55   |  |         129 ms |       1,595 ms |
+| [3](day03)  |  |  01:10:08   |  01:45:36   |  |          57 ms |          69 ms |
+| [2](day02)  |  |  00:43:40   |  01:14:40   |  |         930 ms |      10,293 ms |
+| [1](day01)  |  |  00:27:06   |  03:11:53   |  |          71 ms |          63 ms |
+
+As of 2025-12-09 17:00:00 PST.
