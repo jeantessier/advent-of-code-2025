@@ -46,3 +46,23 @@ I can sort the rectangles by area and work my way down from the largest, until I
 find one that does not intersect the perimeter.  Of course, the first time I
 tried it, I had forgotten to save the rectangle that I had found, and I used the
 largest rectangle instead.  Silly me!
+
+## Tests
+
+I wrote some tests to help me nail down the logic.  You can run them with:
+
+```bash
+./bin/rspec specs
+```
+
+Or see the full list of tests with:
+
+```bash
+./bin/rspec --format documentation specs
+
+> You may need to install RSpec with:
+>
+> ```bash
+> bundle install
+> bundle binstubs --all
+> ```
