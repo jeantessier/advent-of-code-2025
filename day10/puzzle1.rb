@@ -2,7 +2,7 @@
 
 # Login to https://adventofcode.com/2025/day/10/input to download 'input.txt'.
 
-require './machine'
+require './machine1'
 
 # lines = readlines
 # lines = File.readlines('sample.txt', chomp: true)
@@ -10,7 +10,7 @@ require './machine'
 lines = File.readlines('input.txt', chomp: true)
 ANSWER = 396 # (in 153 ms)
 
-machines = lines.map { |line| Machine.new(line) }
+machines = lines.map { |line| Machine1.new(line) }
 
 puts "Machines (#{machines.size})"
 puts '--------'
