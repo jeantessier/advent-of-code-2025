@@ -5,10 +5,10 @@
 LINE_REGEX = /^(?<source>\w+): (?<outputs>.+)$/
 
 # lines = readlines
-# lines = File.readlines('sample.txt', chomp: true)
-# ANSWER = 5 # (in 49 ms)
+# lines = File.readlines('sample1.txt', chomp: true)
+# ANSWER = 5 # (in 35 ms)
 lines = File.readlines('input.txt', chomp: true)
-ANSWER = 571 # (in 51 ms)
+ANSWER = 571 # (in 40 ms)
 
 graph = lines
   .map { |line| line.match LINE_REGEX }
@@ -23,11 +23,11 @@ puts '-----'
 puts graph.inspect
 puts
 
-def depth_first_search(graph, path_so_far)
-  return [path_so_far] if path_so_far.last == 'out'
+def depth_first_search(graph, path_so_far, target = 'out')
+  return [path_so_far] if path_so_far.last == target
 
-  graph[path_so_far.last].reduce([]) do |acc, child|
-    acc.concat(depth_first_search(graph, path_so_far + [child])) unless path_so_far.include?(child)
+  (graph[path_so_far.last] - path_so_far).reduce([]) do |acc, child|
+    acc.concat(depth_first_search(graph, path_so_far + [child], target))
     acc
   end
 end

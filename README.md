@@ -33,8 +33,8 @@ script that operates on an input text file and writes to stdout.
 |     Day     | Challenge                          |  | Part 1 Time | Part 2 Time |  | Part 1 Runtime | Part 2 Runtime |
 |:-----------:|------------------------------------|--|:-----------:|:-----------:|--|---------------:|---------------:|
 | [12](day12) |                                    |  |             |             |  |                |                |
-| [11](day11) |                                    |  |             |             |  |                |                |
-| [10](day10) |                                    |  |             |             |  |                |                |
+| [11](day11) |                                    |  |  00:30:28   |             |  |          40 ms |                |
+| [10](day10) |                                    |  |  01:13:06   |             |  |         153 ms |                |
 | [9](day09)  | Red tile rectangles                |  |  00:10:00   |  02:52:40   |  |          95 ms |       2,086 ms |
 | [8](day08)  | Connecting junction boxes          |  |  00:45:37   |  00:58:39   |  |         579 ms |         830 ms |
 | [7](day07)  | Beam splitting in tachion manifold |  |  00:29:33   |  01:18:23   |  |          63 ms |          67 ms |
@@ -45,4 +45,4 @@ script that operates on an input text file and writes to stdout.
 | [2](day02)  | Invalid product IDs                |  |  00:43:40   |  01:14:40   |  |         930 ms |      10,293 ms |
 | [1](day01)  | Passing zero on a dial             |  |  00:27:06   |  03:11:53   |  |          71 ms |          63 ms |
 
-As of 2025-12-09 17:00:00 PST.
+As of 2025-12-10 23:09:00 PST.
