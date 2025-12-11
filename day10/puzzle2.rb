@@ -2,15 +2,15 @@
 
 # Login to https://adventofcode.com/2025/day/10/input to download 'input.txt'.
 
-require './machine2b'
+require_relative 'machine2'
 
 # lines = readlines
-# lines = File.readlines('sample.txt', chomp: true)
-# ANSWER = 33 # (in 105 ms)
-lines = File.readlines('input1.txt', chomp: true)
-ANSWER = -1 # (in ?? ms)
+lines = File.readlines('sample.txt', chomp: true)
+ANSWER = 33 # (in 105 ms)
+# lines = File.readlines('input1.txt', chomp: true)
+# ANSWER = -1 # (in ?? ms)
 
-machines = lines.map { |line| Machine2b.new(line) }
+machines = lines.map { |line| Machine2.new(line) }
 
 puts "Machines (#{machines.size})"
 puts '--------'

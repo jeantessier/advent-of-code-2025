@@ -2,7 +2,7 @@
 
 # Login to https://adventofcode.com/2025/day/10/input to download 'input.txt'.
 
-require './machine1'
+require_relative 'machine1'
 
 # lines = readlines
 # lines = File.readlines('sample.txt', chomp: true)
