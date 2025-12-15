@@ -77,13 +77,30 @@ describe Constraint do
     subject { constraint.running_total }
 
     [
-      ['no variable has a determined value', [0..5, nil, 0..5, nil], 0],
-      ['one variable has a determined value', [nil, 4..4, nil, nil], 4],
-      ['multiple variables have determined values', [nil, 4..4, 0..5, 1..1], 5],
+      ['no variable with a determined value', [0..5, nil, 0..5, nil], 0],
+      ['one variable with a determined value', [nil, 4..4, nil, nil], 4],
+      ['multiple variables with determined values', [nil, 4..4, 0..5, 1..1], 5],
     ].each do |label, initial_variables, expected_result|
-      describe "when comparing to #{label}" do
+      describe "with #{label}" do
         let(:variables) { initial_variables }
         it { is_expected.to eq expected_result }
+      end
+    end
+  end
+
+  describe :constrain_variables! do
+    let(:constraint) { Constraint.new(variables: variables, total: 5) }
+
+    subject { constraint.constrain_variables!.variables }
+
+    [
+      ['no variable has a determined value', [0..5, nil, 0..5, nil], [0..5, nil, 0..5, nil]],
+      ['one variable has a determined value', [4..4, nil, 0..5, nil], [4..4, nil, 0..1, nil]],
+      ['multiple variables have determined values', [nil, 4..4, 0..5, 1..1], [nil, 4..4, 0..0, 1..1]],
+    ].each do |label, initial_variables, expected_variables|
+      describe "with #{label}" do
+        let(:variables) { initial_variables }
+        it { is_expected.to eq expected_variables }
       end
     end
   end

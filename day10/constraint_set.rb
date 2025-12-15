@@ -19,6 +19,7 @@ class ConstraintSet
   end
 
   def restrict_variables!
+    @constraints.each(&:constrain_variables!)
     (0...constraints.first.variables.size).each do |variable|
       restrictions = constraints.map { |constraint| constraint.variables[variable] }.reject(&:nil?)
       strictest_restriction = (restrictions.map(&:begin).max)..(restrictions.map(&:end).min)

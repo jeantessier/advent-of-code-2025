@@ -14,6 +14,15 @@ class Constraint
   def running_total = @variables.select { |v| v&.size == 1 }.sum(&:begin)
   def remainder = total - running_total
 
+  def constrain_variables!
+    @variables
+      .map.with_index { |v, i| v && v.size > 1 ? i : nil }
+      .reject(&:nil?)
+      .each { |i| @variables[i] = 0..remainder }
+
+    self
+  end
+
   def +(variation)
     Constraint.new(
       variables: variables.zip(variation).map { |a, b| a.nil? ? nil : b.nil? ? a : b },
