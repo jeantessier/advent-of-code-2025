@@ -11,7 +11,7 @@ class Machine2
 
     totals = match[:joltages].split(',').map(&:to_i)
 
-    bottons = match[:buttons]
+    buttons = match[:buttons]
              .split
              .map { |wiring| wiring[1...-1] }
              .map { |wiring| wiring.split(',') }
@@ -26,8 +26,6 @@ class Machine2
         )
       end
       .uniq
-
-
 
     initial_ranges = rows.map do |row|
       top = row.zip(totals)

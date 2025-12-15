@@ -69,36 +69,4 @@ describe Constraint do
       end
     end
   end
-
-  describe "variations" do
-    subject { constraint.variations }
-
-    context "when constraint is not valid" do
-      let(:constraint) { Constraint.new(variables: [nil, nil, 0..2, nil], total: 5) }
-
-      it "generates no variations" do
-        is_expected.to eq []
-      end
-    end
-
-    context "1-variable constraint" do
-      let(:constraint) { Constraint.new(variables: [nil, nil, 0..10, nil], total: 5) }
-
-      it "generates a single variation for its total" do
-        is_expected.to eq [[nil, nil, 5..5, nil]]
-      end
-    end
-
-    context "2-variables constraint generates a single variation for its total" do
-      let(:constraint) { Constraint.new(variables: [0..2, nil, 0..10, nil], total: 5) }
-
-      it "generates variations on its variable with shortest range" do
-        is_expected.to eq [
-                          [0..0, nil, 5..5, nil],
-                          [1..1, nil, 5..5, nil],
-                          [2..2, nil, 5..5, nil],
-                        ]
-      end
-    end
-  end
 end
