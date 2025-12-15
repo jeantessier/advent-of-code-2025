@@ -57,6 +57,8 @@ describe Constraint do
   describe :== do
     let(:constraint) { Constraint.new(variables: [0..5, nil, 0..5, nil], total: 5) }
 
+    subject { constraint == other_constraint }
+
     [
       ['an identical constraint', [0..5, nil, 0..5, nil], 5, true],
       ['different variables', [nil, 4..4, nil, nil], 5, false],
@@ -64,9 +66,26 @@ describe Constraint do
     ].each do |label, variables, total, expected_result|
       describe "when comparing to #{label}" do
         let(:other_constraint) { Constraint.new(variables: variables, total: total) }
-        subject { constraint == other_constraint }
         it { is_expected.to eq expected_result }
       end
     end
   end
+
+  describe :running_total do
+    let(:constraint) { Constraint.new(variables: variables, total: 5) }
+
+    subject { constraint.running_total }
+
+    [
+      ['no variable has a determined value', [0..5, nil, 0..5, nil], 0],
+      ['one variable has a determined value', [nil, 4..4, nil, nil], 4],
+      ['multiple variables have determined values', [nil, 4..4, 0..5, 1..1], 5],
+    ].each do |label, initial_variables, expected_result|
+      describe "when comparing to #{label}" do
+        let(:variables) { initial_variables }
+        it { is_expected.to eq expected_result }
+      end
+    end
+  end
+
 end

@@ -11,6 +11,9 @@ class Constraint
   def range = (@variables.sum { |v| v&.begin || 0 })..(@variables.sum { |v| v&.end || 0 })
   def valid? = range.include?(total)
 
+  def running_total = @variables.select { |v| v&.size == 1 }.sum(&:begin)
+  def remainder = total - running_total
+
   def +(variation)
     Constraint.new(
       variables: variables.zip(variation).map { |a, b| a.nil? ? nil : b.nil? ? a : b },
