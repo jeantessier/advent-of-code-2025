@@ -22,7 +22,11 @@ class ConstraintSet
     (0...constraints.first.variables.size).each do |variable|
       restrictions = constraints.map { |constraint| constraint.variables[variable] }.reject(&:nil?)
       strictest_restriction = (restrictions.map(&:begin).max)..(restrictions.map(&:end).min)
-      constraints.each { |constraint| constraint.variables[variable] = strictest_restriction unless constraint.variables[variable].nil? }
+      constraints
+        .reject { |constraint| constraint.variables[variable].nil? }
+        .each do |constraint|
+          constraint.variables[variable] = strictest_restriction
+        end
     end
 
     self
