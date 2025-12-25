@@ -56,7 +56,7 @@ class ConstraintSet
       variables_by_impact[i]
     end
 
-    max_impact = variable_impact.select { it }.max
+    max_impact = variable_impact.compact.max
     target_variable = variable_impact.index(max_impact)
 
     range = target_constraint.variables[target_variable]

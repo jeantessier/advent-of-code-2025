@@ -12,7 +12,7 @@ ANSWER = 344423158480189 # (in 50 ms)
 
 fresh_ranges = lines
   .map { |line| line.match FRESH_RANGE_REGEX }
-  .select { |match| match }
+  .compact
   .map { |match| match[:start].to_i..match[:end].to_i }
 
 puts "Fresh Ranges (#{fresh_ranges.size})"

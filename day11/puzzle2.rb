@@ -12,7 +12,7 @@ ANSWER = -1 # (in ?? ms)
 
 graph = lines
   .map { |line| line.match LINE_REGEX }
-  .select { |match| match }
+  .compact
   .reduce(Hash.new { |hash, key| hash[key] = [] }) do |graph, match|
     graph[match[:source]].concat(match[:outputs].split)
     graph

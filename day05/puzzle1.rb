@@ -13,7 +13,7 @@ ANSWER = 505 # (in 63 ms)
 
 fresh_ranges = lines
   .map { |line| line.match FRESH_RANGE_REGEX }
-  .select { |match| match }
+  .compact
   .map { |match| match[:start].to_i..match[:end].to_i }
 
 puts 'Fresh Ranges'
@@ -23,7 +23,7 @@ puts
 
 ids = lines
   .map { |line| line.match ID_REGEX }
-  .select { |match| match }
+  .compact
   .map { |match| match[:id].to_i }
 
 puts 'IDs'

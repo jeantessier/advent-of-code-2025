@@ -15,3 +15,7 @@ a rotation or a flip has changed the shape at all.  I can store the variations
 with a shape.  When I want to validate if I can add a "shape 2" to an area, I
 can try each of its variations.  There are only six 3x3 shapes in the input, it
 would be faster to hard-code the variations than to automate it.
+
+## Puzzle 2
+
+

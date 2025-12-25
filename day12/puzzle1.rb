@@ -41,7 +41,7 @@ puts
 
 regions = lines
   .map { |line| line.match REGION_REGEX }
-  .select { |match| match }
+  .compact
   .map { |match| Region.new(match[:width], match[:length], match[:quantities]) }
 
 puts "Regions (#{regions.size})"
